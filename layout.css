@@ -1,50 +1,229 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body {
-  background-image: url(assets/background-home-desktop.jpg);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
 }
 /* Header S */
 .header {
+  position: fixed;
   display: flex;
+  width: 100%;
   justify-content: space-between;
-  background: rgba(128, 128, 128, 0.502);
+  background: rgba(128, 128, 128, 0);
   align-items: center;
-  padding: 15px;
-  position: relative;
+  padding: 0 15px;
   top: 20px;
+  z-index: 100;
 }
-.header img{
-    width: 30px;
-    margin-left: 10px;
+
+.header img {
+  width: 30px;
+  margin-left: 10px; 
 }
-.header ol {
+.header .menuIcon{
+  position: fixed;
+  right: 20px;
+  top: 35px;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.header #ol {
+  position: relative;
   list-style-type: none;
+  top: 45px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: last baseline;
 }
-.header ol li {
-  padding: 0 20px;
-  color: rgba(255, 255, 255, 0.562);
+.header #ol #li {
+  text-decoration: none;
+  padding: 10px 0px 0px;
+  color: rgba(170, 188, 223, 0);
+  text-transform: uppercase;
 }
-.header ol li span{
-    color: white;
-    padding-right: 5px;
+.header #ol #li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.header #ol #li:hover {
+  border-bottom: solid 1px white;
+}
+.header #ol #li span {
+  color: white;
+  padding-right: 5px;
+}
+.header #ol {
+  display: none;
+}
+.header .burgerIcon:hover + #ol{
+  display: flex;
+  width: 100%;
+  position: absolute;
+  align-items: flex-end;
+  padding: 0;
+  right: 10px;
 }
 
 /* Header E */
 /* landing S */
-#landing {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 400px;
+.main-container {
+  position: relative;
 }
-.text p,
-.text h1,
-#landing p {
-    color: white;
+.container {
+  background-image: url(./assets/home/background-home-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+#landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin: 0px auto;
+  height: 100vh;
 }
 
+.text {
+  margin: 0 0 0;
+  width: 400px;
+}
+.text p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.512);
+  text-align: justify;
+}
+.text #text-first {
+  text-align: center;
+  text-transform: uppercase;
+}
+.text #text-second {
+  line-height: 30px;
+  text-align: center;
+}
+.text h1 {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 20px 0;
+  text-align: center;
+}
+#landing #explore {
+  width: 150px;
+  height: 150px;
+  padding: 65px 0;
+  text-transform: uppercase;
+  background-color: rgb(218, 208, 208);
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: rgba(8, 7, 7, 0.71);
+  display: none;
+}
 /* landing E */
+
+/* ======= Media Query ======= */
+/* media query Tablet S */
+@media screen and (min-width: 768px) {
+  .container {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  .burgerIcon{
+    display: none;
+  }
+  .header #ol{
+    position: relative;
+    display: flex;
+    top: 0;
+    flex-direction: row;
+  }
+  .header #ol #li {
+    padding: 0 20px ;
+  
+  }
+  .header{
+    background: rgba(128, 128, 128, 0);
+  }
+  #landing {
+    width: 100%;
+  }
+  .text {
+    margin: 0px auto;
+  }
+  .text p {
+    text-align: center;
+  }
+  #text-second {
+    text-align: center;
+    margin: 0 20px;
+  }
+  .text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  #landing #explore{
+    display: block;
+    margin: 20px auto ;
+  }
+}
+/* media query Tablet E */
+/* media query Desktop S */
+@media screen and (min-width: 1024px){
+  #landing {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+  #landing #explore{
+    display: block;
+  }
+  .burgerIcon{
+    display: none;
+  }
+  .header #ol{
+    position: relative;
+    display: flex;
+    top: 0;
+    flex-direction: row;
+  }
+  .header #ol #li {
+    padding: 0 20px ;
+  
+  }
+  }
+  .header{
+    background: rgba(128, 128, 128, 0);
+  }
+  #landing {
+    width: 100%;
+  }
+  .text {
+    margin: 0px auto;
+  }
+  .text p {
+    text-align: center;
+  }
+  #text-second {
+    text-align: center;
+    margin: 0 20px;
+  }
+  .text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  #explore {
+    margin: 0 2rem 0 0;
+  }
+}
+/* media query Desktop E */

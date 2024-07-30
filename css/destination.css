@@ -1,0 +1,251 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+#desti-containter {
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  
+}
+/* Header S */
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: rgba(128, 128, 128, 0);
+  align-items: center;
+  padding: 0 15px;
+  /* top: 20px; */
+  z-index: 100;
+}
+.header img {
+  width: 30px;
+  margin-left: 10px;
+}
+.header #ol {
+  list-style-type: none;
+  display: flex;
+}
+.header #ol #li {
+  text-decoration: none;
+  padding: 0 20px;
+  color: rgba(170, 188, 223, 0.562);
+  text-transform: uppercase;
+  padding: 20px;
+}
+.header #ol #li a {
+  text-decoration: none;
+  color: white;
+}
+.header #ol #li:hover {
+  border-bottom: solid 1px white;
+}
+.header #ol #li span {
+  color: white;
+  padding-right: 5px;
+}
+.anchor {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  top: -100px;
+  left: 0;
+  visibility: hidden;
+}
+/* Destination S */
+#main-dest {
+  position: relative;
+  display: flex;
+  /* top: 60px; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 90%; */
+  color: white;
+  width: 90%;
+
+  margin: auto;
+}
+#destMainText {
+  font-size: 0.9rem;
+  margin: 0px 0px 20px;
+  color: red;
+  text-transform: uppercase;
+}
+.select {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 100%;
+  align-items: center;
+}
+.img {
+  position: relative;
+  width: 60%;
+  padding: 20px 0 0 0;
+}
+.img img {
+  width: 100%;
+}
+#select-cont {
+  height: 100%;
+  width: 100%;
+  margin: 1px 20px;
+}
+#ul-dest {
+  display: flex;
+  list-style-type: none;
+  width: fit-content;
+  margin: 0px auto;
+}
+.planet {
+  /* width: 90%; */
+  margin: 0px auto;
+}
+#ul-dest li {
+  margin: 0 0 0 20px;
+}
+#ul-dest li:first-child {
+  margin: 0;
+}
+#ul-dest li a {
+  color: #2b60a4c9;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+#ul-dest li a:hover {
+  border-bottom: 2px rgb(203, 204, 214) solid;
+}
+.select .moon,
+.select .mars,
+.select .europa,
+.select .titan {
+  display: none;
+}
+.select .active {
+  display: block;
+}
+.select .planet h2 {
+  color: white;
+  font-size: 2.5rem;
+  padding: 20px 0;
+  width: fit-content;
+  margin: auto;
+}
+.planet .planetP {
+  width: fit-content;
+  text-align: justify;
+  font-size: 1rem;
+  color: rgb(248, 240, 240);
+  margin: 0px auto;
+}
+#downText {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  top: 1rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 0.5px rgba(125, 141, 216, 0.346) solid;
+}
+#downText #ave-title,
+#downText #est-title {
+  color: blueviolet;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+#downText #ave-text,
+#downText #est-text {
+  font-size: 2rem;
+}
+.header #ol {
+  display: none;
+}
+/* Destination E */
+/* ======= Media Query ======= */
+/* media query Tablet S */
+@media screen and (min-width: 768px) {
+  #main-dest{
+    position:relative;
+    padding-top:100px ;
+  }
+  .header{
+    background: rgba(128, 128, 128, 0.508);
+  }
+  .text {
+    margin: 0px auto;
+  }
+  .text p {
+    text-align: center;
+  }
+  .planetP{
+    width: 20%;
+  }
+  #text-second {
+    text-align: center;
+    margin: 0 20px;
+  }
+  .text h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .img{
+    width: 50%;
+  }
+  #desti-containter {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+    background-size: cover;
+  }
+  .header #ol {
+    display: flex;
+  }
+}
+/* media query Tablet E */
+/* media query Desktop S */
+@media screen and (min-width: 1024px) {
+    #main-dest{
+        position:relative;
+        padding-top:100px ;
+      }
+ .select{
+    flex-direction: row-reverse;
+ }
+ #select-cont{
+    width: 50%;
+ }
+  .text {
+    margin: 0px auto;
+  }
+  .text p {
+    text-align: center;
+  }
+  #destMainText{
+    font-size: 1.5rem;
+  }
+  #desti-containter {
+    background-image: url(../assets/destination/background-destination-desktop.jpg);
+    background-size: cover;
+  }
+  .header #ol {
+    display: flex;
+  }
+  .header{
+    background: rgba(128, 128, 128, 0.512);
+  }
+  .menuIcon{
+    display: none;
+  }
+}
+/* media query Desktop E */

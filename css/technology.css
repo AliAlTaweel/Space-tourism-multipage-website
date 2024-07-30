@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --headr-background-color: rgba(128, 128, 128, 0.43);
+  --headr-Mobile-background-color: rgba(128, 128, 128, 0);
+  --span-blue-text: rgb(57, 64, 119);
+  --h3-color: red;
+  --text-color: rgb(92, 92, 137);
+  --text-color-off-white: rgb(224, 216, 216);
+}
+#tech-container {
+  height: 100vh;
+}
+/* Header S */
+.header {
+  position: relative;
+  background: var(--headr-Mobile-background-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 100;
+}
+.header img {
+  width: 30px;
+  margin-left: 10px;
+}
+.header #ol {
+  list-style-type: none;
+  display: flex;
+}
+.header #ol #li {
+  text-decoration: none;
+  padding: 0 20px;
+  color: rgba(170, 188, 223, 0.562);
+  text-transform: uppercase;
+  padding: 20px;
+}
+.header #ol #li a {
+  text-decoration: none;
+  color: white;
+}
+.header #ol #li a span{
+  color: var(--span-blue-text);
+}
+.header #ol #li:hover {
+  border-bottom: solid 1px white;
+}
+.header #ol #li span {
+  color: white;
+  padding-right: 5px;
+}
+.header #ol {
+  display: none;
+}
+.menuIcon {
+  color: white;
+}
+/* Header E */
+/* ======= Technology ======= */
+/* Technology S */
+#tech-container {
+  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  min-height: 100vh;
+  position: relative;
+}
+#landing {
+  position: relative;
+  overflow: hidden;
+}
+.contanier {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.techTitle {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 0px;
+}
+.techTitle span {
+  color: blue;
+}
+.techText {
+  position: relative;
+  margin: 0px auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15px 0px;
+}
+.nums #techUl {
+  display: flex;
+  flex-direction: row;
+  color: rgb(218, 218, 120);
+  list-style-type: none;
+}
+.nums #techUl a {
+  display: block;
+  margin-left: 15px;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  color: rgb(248, 241, 241);
+  border-radius: 50%;
+  text-align: center;
+  justify-self: center;
+  cursor: pointer;
+}
+.nums #techUl .active {
+  background-color: white;
+  color: black;
+}
+.text {
+  position: relative;
+  margin: 20px auto;
+  display: none;
+}
+.textIn {
+  width: 100%;
+  padding-right: 20px;
+}
+.textIn p,
+.textIn h2 {
+  width: fit-content;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  margin: 1px auto;
+}
+.textIn p:last-child {
+  text-transform: lowercase;
+}
+.img {
+  width: 100%;
+  margin: 1px auto;
+}
+.img img {
+  width: 97%;
+  margin: 0px auto;
+  border-radius: 10px;
+}
+.active {
+  display: block;
+}
+
+/* ======= Media Query ======= */
+/* media query Tablet S */
+@media screen and (min-width: 768px) {
+  .header #ol {
+    display: flex;
+  }
+  .header {
+    background: rgba(128, 128, 128, 0);
+  }
+  .header .menuIcon{
+    display: none;
+  }
+  .contanier {
+    margin-left: 20px;
+  }
+  #tech-container {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+    background-size: cover;
+  }
+  .mainText {
+    height: 100%;
+  }
+  .techText {
+    flex-direction: row;
+  }
+  .nums {
+    margin: 0px 20px 0px 0px;
+    position: relative;
+  }
+  .nums #techUl {
+    display: flex;
+    flex-direction: column;
+  }
+  .nums #techUl li {
+    margin: 0px 0px 20px 0px;
+  }
+  .active {
+    display: flex;
+  }
+.menuIcon{
+  display: none;
+}
+  img {
+    height: 100%;
+  }
+}
+/* media query Tablet E */
+/* media query Desktop S */
+@media screen and (min-width: 1024px) {
+  .contanier {
+    margin-left: 60px;
+  }
+  .header .menuIcon{
+    display: none;
+  }
+  .header {
+    display: flex;
+  }
+  #tech-container {
+    background-image: url(../assets/technology/background-technology-desktop.jpg);
+    background-size: cover;
+  }
+  .menuIcon {
+    display: none;
+  }
+}
+/* media query Desktop E */

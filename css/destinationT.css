@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --headr-background-color: rgba(128, 128, 128, 0.43);
+  --headr-Mobile-background-color: rgba(128, 128, 128, 0);
+  --span-blue-text: rgb(57, 64, 119);
+  --h3-color: red;
+  --text-color: rgb(92, 92, 137);
+  --text-color-off-white: rgb(224, 216, 216);
+}
+#desti-containter {
+  background: url(../assets/destination/background-destination-mobile.jpg);
+  background-size: cover;
+}
+/* Header S */
+/* Header S */
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background: rgba(128, 128, 128, 0);
+  align-items: center;
+  padding: 0 15px;
+  top: 20px;
+  z-index: 100;
+}
+
+.header img {
+  width: 30px;
+  margin-left: 10px;
+}
+.header .menuIcon {
+  position: fixed;
+  right: 20px;
+  top: 35px;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.header #ol {
+  position: relative;
+  list-style-type: none;
+  top: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: last baseline;
+}
+.header #ol #li {
+  text-decoration: none;
+  padding: 10px 0px 0px;
+  color: rgba(170, 188, 223, 0);
+  text-transform: uppercase;
+}
+.header #ol #li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.header #ol #li:hover {
+  border-bottom: solid 1px white;
+}
+.header #ol #li span {
+  color: white;
+  padding-right: 5px;
+}
+.header #ol {
+  display: none;
+}
+.header .burgerIcon:hover + #ol {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  align-items: flex-end;
+  padding: 0;
+  right: 10px;
+}
+/* Header E */
+#main-dest {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+}
+#destMainText {
+  color: var(--h3-color);
+  text-transform: uppercase;
+  margin: 20px auto;
+}
+.select {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  width: 100%;
+}
+.img img {
+  width: 200px;
+  margin: 0px auto 20px;
+}
+#select-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#select-cont #ul-dest {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto 20px;
+  padding: 0px 5px;
+}
+#select-cont #ul-dest li a {
+  text-decoration: none;
+  color: var(--span-blue-text);
+  font-weight: bold;
+}
+.planet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  padding: 0px 20px;
+  display: none;
+}
+.planet h2 {
+  font-weight: normal;
+  margin: 20px 0px 30px;
+  text-transform: uppercase;
+}
+.planet .planetP {
+  text-align: justify;
+  margin: 0px 0px 50px;
+  color: var(--text-color);
+}
+#downText {
+  margin: 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+#downText .ave,
+#downText .est {
+  margin: 0px 0px 20px;
+  width: 100%;
+}
+#downText .ave #ave-title,
+#downText .est #est-title {
+  font-size: 0.9rem;
+  margin: 0px auto 5px;
+  width: fit-content;
+  color: var(--text-color);
+}
+#downText .ave #ave-text,
+#downText .est #est-text {
+  margin: 0px auto 5px;
+  width: fit-content;
+  font-size: 2rem;
+  color: var(--text-color-off-white);
+  font-weight: 100;
+}
+.active {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  #desti-containter {
+    background: url(../assets/destination/background-destination-tablet.jpg);
+    background-size: cover;
+    overflow: auto;
+  }
+  .header {
+    background: var(--headr-Mobile-background-color);
+    position: fixed;
+    width: 100%;
+    padding: 20px 25px;
+  }
+  .burgerIcon {
+    display: none;
+  }
+  .header #ol {
+    position: relative;
+    display: flex;
+    top: 0;
+    flex-direction: row;
+  }
+  .header #ol #li {
+    padding: 0 20px;
+  }
+  #main-dest {
+    position: relative;
+    height: 100vh;
+    top: 60px;
+  }
+  #destMainText {
+    margin: 26px 0px;
+  }
+  .select #select-cont #ul-dest {
+    width: 50%;
+  }
+  .planet .planetP {
+    width: 70%;
+  }
+  .img img {
+    width: 300px;
+    margin: 0px auto 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #desti-containter {
+    background: url(../assets/destination/background-destination-desktop.jpg);
+    background-size: cover;
+  }
+  .header {
+    background: var(--headr-Mobile-background-color);
+    position: fixed;
+    width: 100%;
+    padding: 20px 25px;
+  }
+  .planet .planetP {
+    width: 80%;
+  }
+  .img img {
+    width: 500px;
+    margin: 0px auto 20px;
+  }
+}
