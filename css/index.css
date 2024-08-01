@@ -1,21 +1,22 @@
 * {
-  padding: 0;
-  margin: 0;
+  margin: 0px;
+  padding: 0px;
+  border: none;
   box-sizing: border-box;
+  color: white;
   font-family: "Times New Roman", Times, serif;
 }
 :root {
   --text-color-light-blue: #9697ad;
 }
-#crew-container {
-  background-image: url(../assets/crew/background-crew-desktop.jpg);
+.main-container {
+  background: url(../assets/home/background-home-mobile.jpg);
   background-size: cover;
   height: 100vh;
-  width: 100%;
-  position: relative;
-  margin: 0px auto;
 }
-/* Header S */
+.container {
+}
+/* ========= Header S ========= */
 .header {
   background-image: linear-gradient(
     to right,
@@ -30,7 +31,7 @@
   margin: 20px 0px;
   padding: 0px 20px;
   color: white;
-  z-index: 400;
+  z-index: 4;
 }
 .logo img {
   width: 40px;
@@ -39,7 +40,6 @@
   font-size: 1.6rem;
   cursor: pointer;
   position: relative;
-  z-index: 400;
 }
 .header ul {
   display: flex;
@@ -89,117 +89,73 @@
 .header a {
   color: white;
 }
-/* ======= Crew ======= */
-/* Crew S */
-#crew-main {
+/* ========= Header E ========= */
+/* ========= Landing S ========= */
+.container #landing {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+.text {
+  width: 100%;
+}
+.text #text-first {
+  width: fit-content;
+  margin: 30px auto;
+  color: var(--text-color-light-blue);
+  text-transform: uppercase;
+}
+.text h1 {
+  width: fit-content;
+  margin: 30px auto;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.text #text-second {
+  width: fit-content;
+  margin: 30px auto;
+  padding: 0px 20px;
+  color: var(--text-color-light-blue);
+  text-align: center;
+}
+#explore {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  color: white;
-  bottom: 0px;
-}
-.containerCrew {
-  display: flex;
-  width: 100%;
-  margin: 100px 0px 0px;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-}
-.containerCrew #crew-title {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  color: var(--text-color-light-blue);
-}
-.containerCrew #crews .crew {
-  width: 100%;
-}
-.containerCrew #crews .crew h1 {
-  width: fit-content;
-  margin: 20px auto;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: var(--text-color-light-blue);
-}
-.containerCrew #crews .crew #crew-name {
-  width: fit-content;
-  margin: 0px auto 20px;
-  font-size: 2rem;
-  color: var(--text-color-light-blue);
-}
-.containerCrew #crews .crew #crew-story {
-  width: fit-content;
-  margin: 0px auto;
-  padding: 0px 10px;
-  text-align: center;
-  color: var(--text-color-light-blue);
-}
-.containerCrew #points ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  margin: 10px;
-  list-style-type: none;
-}
-#points{
-  margin: 20px 0px;
-}
-.containerCrew #points ul .point {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0px 5px;
-  border-radius: 50%;
   background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
-#crews .crew {
-  display: none;
+#explore p {
+  color: black;
+  font-size: 1.5rem;
 }
-#crew-main .img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-  width: 100%;
-}
-#crew-main .img img {
-  width: 60%;
-}
-#crew-main .active,
-#crews .active {
-  display: flex;
-}
-/* Crew E */
-/* ======= Media Query ======= */
-/* media query Tablet S */
+
+/* ========= Landing S ========= */
+/* ========= Media Query S ========= */
 @media screen and (min-width: 768px) {
-  #crew-container {
-    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  .main-container {
+    background: url(../assets/home/background-home-tablet.jpg);
     background-size: cover;
   }
   .header {
     padding: 0px 40px;
   }
-  #crew-main .img img {
-    width: 35%;
-  }
-  .containerCrew #crews .crew #crew-story {
-    width: 100%;
-    padding: 0px 6rem;
+ 
+  #landing .text {
+    width: 60%;
   }
 }
-/* media query tablet E */
-/* media query Desktop S */
 @media screen and (min-width: 1024px) {
-  #crew-container {
-    background-image: url(../assets/crew/background-crew-desktop.jpg);
+  .main-container {
+    background: url(../assets/home/background-home-desktop.jpg);
     background-size: cover;
-    overflow: hidden;
   }
   .header .burgerIcon {
     display: none;
@@ -226,16 +182,12 @@
   .header ul li a:hover {
     border-bottom: 1px solid white;
   }
-  #crew-main .img img {
-    width: 35%;
+  .container #landing{
+    flex-direction: row;
   }
-  #details-text #crew-story {
-    width: 80%;
-    margin: 0px auto;
-    font-size: 1.2rem;
-    text-align: center;
+  #landing .text h1{
+    font-size: 4rem;
   }
-  
 
 }
-/* media query Desktop E */
+/* ========= Media Query E ========= */

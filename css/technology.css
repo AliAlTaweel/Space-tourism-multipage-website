@@ -16,47 +16,75 @@
 }
 /* Header S */
 .header {
-  position: relative;
-  background: var(--headr-Mobile-background-color);
+  background-image: linear-gradient(
+    to right,
+    rgba(250, 244, 244, 0),
+    rgba(0, 0, 0, 0.329)
+  );
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  z-index: 100;
+  position: fixed;
+  margin: 20px 0px;
+  padding: 0px 20px;
+  color: white;
+  z-index: 4;
 }
-.header img {
-  width: 30px;
-  margin-left: 10px;
+.logo img {
+  width: 40px;
 }
-.header #ol {
-  list-style-type: none;
+.burgerIcon {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+}
+.header ul {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  margin: 0px;
+  list-style-type: none;
+  width: 110px;
+  display: none;
+  z-index: 1000;
+  background-color: rgba(176, 124, 124, 0.466);
+  border-radius: 5px;
 }
-.header #ol #li {
-  text-decoration: none;
-  padding: 0 20px;
-  color: rgba(170, 188, 223, 0.562);
-  text-transform: uppercase;
-  padding: 20px;
+.header ul li {
+  margin: 0px 0px 0px;
+  padding: 4px 5px;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
 }
-.header #ol #li a {
-  text-decoration: none;
-  color: white;
-}
-.header #ol #li a span{
-  color: var(--span-blue-text);
-}
-.header #ol #li:hover {
-  border-bottom: solid 1px white;
-}
-.header #ol #li span {
-  color: white;
-  padding-right: 5px;
-}
-.header #ol {
+.header ul li span {
   display: none;
 }
-.menuIcon {
+.iconUl {
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .header .iconUl:hover ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .header ul li:hover {
+    color: rgb(53, 239, 53);
+    background-color: rgba(255, 0, 0, 0.472);
+    cursor: pointer;
+  }
+}
+.header #ol a {
+  text-decoration: none;
+}
+.header #ol a span {
+  color: rgb(108, 108, 235);
+}
+.header a {
   color: white;
 }
 /* Header E */
@@ -156,14 +184,8 @@
 /* ======= Media Query ======= */
 /* media query Tablet S */
 @media screen and (min-width: 768px) {
-  .header #ol {
-    display: flex;
-  }
   .header {
-    background: rgba(128, 128, 128, 0);
-  }
-  .header .menuIcon{
-    display: none;
+    padding: 0px 40px;
   }
   .contanier {
     margin-left: 20px;
@@ -205,11 +227,30 @@
   .contanier {
     margin-left: 60px;
   }
-  .header .menuIcon{
+  .header .burgerIcon {
     display: none;
   }
-  .header {
+  .header ul {
     display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: rgba(176, 124, 124, 0);
+  }
+  .header ul li {
+    width: fit-content;
+  }
+  .header ul li a {
+    font-size: 1.4rem;
+    font-weight: 100;
+    padding: 10px;
+  }
+  .header ul li span {
+    display: inline;
+  }
+  .header ul li a:hover {
+    border-bottom: 1px solid white;
   }
   #tech-container {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
